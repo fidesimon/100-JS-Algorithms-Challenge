@@ -1,4 +1,4 @@
-function addBorder(picture: string[]): any {
+function addBorder(picture: string[]): string[] {
     let length = picture[0].length + 2;
 
     let horizontalBorder = '';
