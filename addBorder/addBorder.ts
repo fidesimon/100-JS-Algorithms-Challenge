@@ -1,5 +1,19 @@
-function addBorder(picture: string[]): string[] {
+function addBorder(picture: string[]): any {
+    let length = picture[0].length + 2;
 
+    let horizontalBorder = '';
+    for(let i = 0; i < length; i++){
+        horizontalBorder = horizontalBorder.concat('*');
+    }
+
+    picture = picture.map((row)=>{
+        return "*" + row.concat('*');
+    });
+
+    picture.unshift(horizontalBorder);
+    picture.push(horizontalBorder);
+
+    return picture;
 }
 
-// console.log(addBorder(["abc", "ded"]));
+console.log(addBorder(["abc", "ded"]));
