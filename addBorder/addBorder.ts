@@ -7,7 +7,7 @@ function addBorder(picture: string[]): any {
     }
 
     picture = picture.map((row)=>{
-        return "*" + row.concat('*');
+        return '*'.concat(row, '*');
     });
 
     picture.unshift(horizontalBorder);
