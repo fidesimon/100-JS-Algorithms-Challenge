@@ -1,4 +1,4 @@
-function boxBlur(image: number[][]): any {
+function boxBlur(image: number[][]): number[][] {
     let blurredImage: number[][] = [];
     for (let i = 1; i <= image.length - 2; i++) {
         blurredImage.push([]);
