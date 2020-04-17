@@ -1,7 +1,7 @@
 function arrayReplace(inputArray: number[], elemToReplace: number, substitutionElem: number): number[] {
     return inputArray.map((item) => {
         if (item == elemToReplace)
-            return elemToReplace;
+            return substitutionElem;
         else
             return item;
     })
