@@ -1,5 +1,13 @@
 function incrementalBackups(lastBackupTime: number, changes: number[][]): number[] {
+    let toBackUp = changes.filter(n=>n[0] > lastBackupTime);
+    let results = [];
+    toBackUp.forEach(n => {
+        if(!results.includes(n[1])){
+            results.push(n[1]);
+        }
+    });
 
+    return results;
 }
 
 console.log(incrementalBackups(461620205, [[461620203, 1], 
