@@ -1,6 +1,7 @@
 function properNounCorrection(noun: string): string {
-   
-}
-
-console.log(properNounCorrection('pARiS'));
-console.log(properNounCorrection('John'));
+    noun = noun.toLowerCase();
+    return (noun[0].toUpperCase()) + noun.substr(1);
+ }
+ 
+ console.log(properNounCorrection('pARiS'));
+ console.log(properNounCorrection('John'));
