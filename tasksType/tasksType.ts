@@ -1,5 +1,9 @@
 function tasksTypes(deadlines: number[], day: number): number[] {
+    let today = deadlines.filter(n => n <= day);
+    let upcoming = deadlines.filter(n => (n > day && n <= day + 7));
+    let later = deadlines.filter(n => n > day + 7);
 
+    return [today.length, upcoming.length, later.length];
 }
 
 console.log(tasksTypes([1, 2, 3, 4, 5], 2));
